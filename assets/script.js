@@ -2,15 +2,19 @@
 const userCityEl = document.getElementById("user-city");
 const searchEl = document.getElementById("search-btn");
 const cityNameEl = document.getElementById("cityname");
-const tempEl = document.getElementById("temperature");
+const tempEl = document.getElementById("temp");
 const humidityEl = document.getElementById("humidity");
-const windEl = document.getElementById("wind-speed");
-const UVEl = document.getElementById("UV-index");
-var fiveDayEl = document.getElementById("five-Day");
+const windEl = document.getElementById("wind");
+const UVEl = document.getElementById("UVindex");
+var fiveDayEl = document.getElementById("five-day");
 var currentWeatherEl = document.getElementById("current-weather");
 
 const APIKey = "7771575fcc726257a931929957842bbf";
 
+// converts kelvin to fahrenheit
+function k2f(K) {
+    return Math.floor((K - 273.15) * 1.8 + 32);
+}
 
 // function that get weather data from API
 function getWeather(cityname) {
@@ -88,5 +92,11 @@ function getWeather(cityname) {
 }
 
 // localStorage input if any
-
+function searchWeather() {
+    searchEl.addEventListener("click", function () {
+        const searchTerm = userCityEl.value;
+        getWeather(searchTerm);
+    })
+}
 // function that runs all info
+searchWeather();
