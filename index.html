@@ -17,36 +17,44 @@
             <h1>Weather Dashboard</h1>
         </header>
     
-        <div>
-            <div>
-                <h5">Search for a City:</h5>
-                    <div>
-                        <input id="userCity" type="text" aria-label="Enter a city">
-                        <div>
-                            <button class="btn" type="button">
-                                Search
-                            </button>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 bg-light">
+                    <h5 class="mt-1">Search for City:</h5>
+                        <div class="mb-3">
+                            <input id="user-city" type="text" placeholder="city name" aria-label="Enter a city">
+                            <div>
+                                <button class="btn" type="button" id="search-btn">
+                                    Search
+                                </button>
+                            </div>
                         </div>
-                    </div>
-    
-                    <form id="history"></form>
-            </div>
-            <div>
-                <div>
-                    <div>
-                        <div>
-                            <h3></h3>
-    
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                        </div>
-                    </div>
+        
+                        <form id="history"></form>
                 </div>
-                <div>
-                    <div class="col-12">
-                        <h3>5-Day Forecast</h3>
+                <div class="col-lg-9">
+                    <div class="row mr-0">
+                        <div class="col-lg-11 card m-3 d-none">
+                            <div class="card-body">
+                                <h3 id="cityname" class="city-name align-middle"></h3>
+                                <p id="temp"></p>
+                                <p id="humidity"></p>
+                                <p id="wind"></p>
+                                <p id="UVindex"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="five-day" class="row d-none">
+                        <div class="col-12">
+                            <h3>5-Day Forecast</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+                        <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+                        <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+                        <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+                        <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
                     </div>
                 </div>
             </div>
@@ -55,8 +63,5 @@
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="./assets/script.js"></script>
     </body>
-
-
-
-
+    
 </html>

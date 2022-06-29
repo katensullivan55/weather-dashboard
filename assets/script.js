@@ -87,6 +87,6 @@ function getWeather(cityname) {
         });
 }
 
-// localStorage inpout if any
+// localStorage input if any
 
 // function that runs all info
