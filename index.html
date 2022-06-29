@@ -12,8 +12,47 @@
         <link rel="stylesheet" href="./assets/styles.css" />   
     </head>
     <body>
-            
-
+        <header class="container-fluid text-center text-white bg-dark p-2">
+            <h1>Weather Dashboard</h1>
+        </header>
+    
+        <div>
+            <div>
+                <h5">Search for a City:</h5>
+                    <div>
+                        <input id="userCity" type="text" aria-label="Enter a city">
+                        <div>
+                            <button class="btn" type="button">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+    
+                    <form id="history"></form>
+            </div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <h3></h3>
+    
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="col-12">
+                        <h3>5-Day Forecast</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="./assets/script.js"></script>
     </body>
 
 
