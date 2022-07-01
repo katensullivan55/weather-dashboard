@@ -20,21 +20,19 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-3 bg-light">
-                    <h5 class="mt-1">Search for City:</h5>
-                        <div class="input-group mb-3">
-                            <input id="user-city" type="text" placeholder="city name" aria-label="Enter a city">
-                            <div class="input-group-append">
-                                <button class="btn" type="button" id="search-btn">
-                                    Search
-                                </button>
-                            </div>
+                    <h5 class="mt-1">Search for a City</h5>
+                    <div class="input-group mb-3">
+                        <input id="user-city" type="text" class='form-control' placeholder="city name" aria-label="Enter a city">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" id="search-btn">Search</button>
                         </div>
+                    </div>
         
-                        <form id="history"></form>
+                    <form id="history"></form>
                 </div>
                 <div class="col-lg-9">
                     <div class="row mr-0">
-                        <div class="col-lg-11 card m-3 d-none">
+                        <div class="col-lg-11 card m-3 d-none" id="current-weather">
                             <div class="card-body">
                                 <h3 id="cityname" class="city-name align-middle"></h3>
                                 <p id="temp"></p>
@@ -44,7 +42,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="five-day" class="row d-none">
+                    <div id="five-day" class="row d-none" id="five-day">
                         <div class="col-12">
                             <h3>5-Day Forecast</h3>
                         </div>
