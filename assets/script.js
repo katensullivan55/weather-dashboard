@@ -33,7 +33,7 @@ function weatherSearch () {
                 const year = date.getFullYear();
                 cityNameEl.innerHTML = response.data.name + " (" + month + "/" + day + "/" + year + ") ";
 
-                tempEl.innerHTML = "Temperature: " + k2f(response.data.main.temp) + " &#176F";
+                tempEl.innerHTML = "Temperature: " + kelvinConversion(response.data.main.temp) + " &#176F";
                 humidityEl.innerHTML = "Humidity: " + response.data.main.humidity + "%";
                 windEl.innerHTML = "Wind Speed: " + response.data.wind.speed + " MPH";
 
@@ -68,7 +68,7 @@ function weatherSearch () {
 
 
                         const fcs = document.querySelectorAll(".forecast");
-                        for (i = 0; i < fcEls.length; i++) {
+                        for (i = 0; i < fcs.length; i++) {
                             fcs[i].innerHTML = "";
                             const fcIndex = i * 8 + 4;
                             const fcDate = new Date(response.data.list[fcIndex].dt * 1000);
